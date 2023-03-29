@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     app:cardBackgroundColor="#d3d3d3"
-    app:cardElevation="15dp"
+    app:cardElevation="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="30dp">
 

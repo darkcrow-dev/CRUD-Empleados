@@ -61,6 +61,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.75"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
                 android:textSize="20sp"
                 android:hint="Ingrese nombre">
             </EditText>
@@ -91,6 +93,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.75"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
                 android:textSize="20sp"
                 android:hint="Ingrese correo">
             </EditText>

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Elementos de la vista
         nombre = findViewById(R.id.nameEmployee)
         correo = findViewById(R.id.emailEmployee)
         lista = findViewById(R.id.listEmployee)

@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
                 contador = false
             }
             else {
-                Toast.makeText(this, "Eliminar datos falló", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Falló la eliminación de datos", Toast.LENGTH_SHORT).show()
             }
 
             val eeList = sqliteHelper.getAllEmployees()

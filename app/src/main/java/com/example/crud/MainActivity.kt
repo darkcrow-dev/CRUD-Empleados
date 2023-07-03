@@ -106,15 +106,12 @@ class MainActivity : AppCompatActivity() {
 
         if(empleado == null){
             Toast.makeText(this,"Seleccione empleado a cambiar", Toast.LENGTH_SHORT).show()
-            return
         }
         else if(name == empleado?.name && email == empleado?.email){
             Toast.makeText(this, "Datos no se cambiaron", Toast.LENGTH_SHORT).show()
-            return
         }
         else if(name.isEmpty() || email.isEmpty()){
             Toast.makeText(this,"Ingrese los datos requeridos", Toast.LENGTH_SHORT).show()
-            return
         }
 
         val stdConstructor = Employee(id = empleado!!.id, name = name, email = email)
@@ -163,7 +160,7 @@ class MainActivity : AppCompatActivity() {
         alerta.show()
     }
 
-    fun limpiarTexto(){
+    private fun limpiarTexto(){
         nombre.setText("")
         correo.setText("")
         nombre.requestFocus()

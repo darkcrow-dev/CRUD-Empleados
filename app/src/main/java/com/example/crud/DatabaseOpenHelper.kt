@@ -25,7 +25,7 @@ class DatabaseOpenHelper(context: Context): SQLiteOpenHelper(context, DATABASE_N
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db!!.execSQL("DROP TABLE IF EXISTS " + TABLE_EMPLOYEE)
+        db!!.execSQL("DROP TABLE IF EXISTS $TABLE_EMPLOYEE")
         onCreate(db)
     }
 
@@ -46,7 +46,7 @@ class DatabaseOpenHelper(context: Context): SQLiteOpenHelper(context, DATABASE_N
         val contentValues = ContentValues()
         contentValues.put(ID_VALUE, id)
 
-        val success = db.delete(TABLE_EMPLOYEE,"ID =" + id, null)
+        val success = db.delete(TABLE_EMPLOYEE, "ID =$id", null)
         db.close()
 
         return success
@@ -67,7 +67,7 @@ class DatabaseOpenHelper(context: Context): SQLiteOpenHelper(context, DATABASE_N
 
     fun getAllEmployees(): ArrayList<Employee> {
         val eeList: ArrayList<Employee> = ArrayList()
-        val selectQuery = "SELECT * FROM " + TABLE_EMPLOYEE
+        val selectQuery = "SELECT * FROM $TABLE_EMPLOYEE"
         val db = this.readableDatabase
 
         val cursor: Cursor?

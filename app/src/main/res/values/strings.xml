@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CRUD</string>
+
+    <string-array name="genders">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="schooling_levels">
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Preparatoria</item>
+        <item>Licenciatura</item>
+        <item>Maestría</item>
+        <item>Doctorado</item>
+        <item>Posdoctorado</item>
+    </string-array>
+
+    <string-array name="work_experience">
+        <item>Menos de 1 año</item>
+        <item>Entre 1 y menos de 2 años</item>
+        <item>Entre 2 y menos de 4 años</item>
+        <item>4 años o más</item>
+    </string-array>
+
+    <string-array name="currency">
+        <item>MXN</item>
+        <item>USD</item>
+    </string-array>
+</resources>

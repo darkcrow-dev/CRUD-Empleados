@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pantallaActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DatosEmpleadoActivity">
+
+        <TextView
+            android:id="@+id/tituloActividad"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="AGREGAR EMPLEADO"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"></TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contornoImagenEmpleado"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="90dp"
+            app:contentPadding="60dp"
+            app:cardElevation="10dp"
+            app:layout_goneMarginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+            <ImageView
+                android:id="@+id/imagenEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/agregar_imagen"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nombresEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline9">
+
+            <EditText
+                android:id="@+id/nombresEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Nombre(s)"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/apellidosEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+            <EditText
+                android:id="@+id/apellidosEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Apellido(s)"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/generoEmpleadoLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/arrow_drop_down"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline11">
+
+            <AutoCompleteTextView
+                android:id="@+id/generoEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Género"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:textSize="16sp"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fechaNacimientoEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline12">
+
+            <AutoCompleteTextView
+                android:id="@+id/fechaNacimientoEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Fecha de nacimiento"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="16sp"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/educacionEmpleadoLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/arrow_drop_down"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline13">
+
+            <AutoCompleteTextView
+                android:id="@+id/educacionEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Educación"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="16sp"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/areaEducacionEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline14">
+
+            <EditText
+                android:id="@+id/areaEducacionEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Área de educación"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telefonoEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline15">
+
+            <EditText
+                android:id="@+id/telefonoEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:digits="0123456789"
+                android:hint="Telefono"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correoEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline16">
+
+            <EditText
+                android:id="@+id/correoEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Correo"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/empresaEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline17">
+
+            <EditText
+                android:id="@+id/empresaEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Empresa"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/puestoEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline18">
+
+            <EditText
+                android:id="@+id/puestoEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Puesto de trabajo"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/experienciaLaboralEmpleadoLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/arrow_drop_down"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline19">
+
+            <AutoCompleteTextView
+                android:id="@+id/experienciaLaboralEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Experiencia laboral"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="16sp"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/salarioEmpleadoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline29"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline20">
+
+            <EditText
+                android:id="@+id/salarioEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:digits="0123456789."
+                android:hint="Salario"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="16sp"></EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/monedaSalarioEmpleadoLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#601C1B1F"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconDrawable="@drawable/arrow_drop_down"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline29"
+            app:layout_constraintTop_toTopOf="@+id/guideline20">
+
+            <AutoCompleteTextView
+                android:id="@+id/monedaSalarioEmpleado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Moneda"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:singleLine="true"
+                android:textSize="16sp"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/botonGuardar"
+            android:layout_width="120dp"
+            android:layout_height="56dp"
+            android:text="GUARDAR"
+            app:layout_constraintEnd_toStartOf="@+id/guideline30"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline21"></Button>
+
+        <Button
+            android:id="@+id/botonCancelar"
+            android:layout_width="120dp"
+            android:layout_height="56dp"
+            android:text="CANCELAR"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline30"
+            app:layout_constraintTop_toTopOf="@+id/guideline21"></Button>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="54dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="250dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="342dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="434dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="526dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="618dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="710dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="802dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="894dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="986dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1078dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1170dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1262dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1354dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1446dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

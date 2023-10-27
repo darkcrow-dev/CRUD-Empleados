@@ -75,7 +75,7 @@ class DatabaseOpenHelper(private val contexto: Context): SQLiteOpenHelper(contex
         val contentValues = ContentValues()
         contentValues.put(ID_VALUE, id)
 
-        dataBase.delete(EMPLOYEES_TABLE, "ID =$id", null)
+        dataBase.delete(EMPLOYEES_TABLE, "$ID_VALUE = $id", null)
         dataBase.close()
     }
 
@@ -99,7 +99,7 @@ class DatabaseOpenHelper(private val contexto: Context): SQLiteOpenHelper(contex
         contentValues.put(SALARY_VALUE, dataEmployee.salario)
         contentValues.put(CURRENCY_VALUE, dataEmployee.monedaSalario)
 
-        dataBase.update(EMPLOYEES_TABLE, contentValues, "ID=" + dataEmployee.id,null)
+        dataBase.update(EMPLOYEES_TABLE, contentValues, "$ID_VALUE = ${dataEmployee.id}",null)
         dataBase.close()
     }
 
@@ -188,9 +188,5 @@ class DatabaseOpenHelper(private val contexto: Context): SQLiteOpenHelper(contex
         val imagenRecibida = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, imagenRecibida)
         return imagenRecibida.toByteArray()
-    }
-
-    fun getUsuario(){
-
     }
 }
